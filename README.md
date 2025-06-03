@@ -1,6 +1,6 @@
 <<<<<<< HEAD
-## FoodVilla 🍴
-FoodVilla is a modern food-ordering web application built entirely with React.js. The app leverages Redux for efficient state management and uses a CORS extension to handle cross-origin requests during development.
+## Food_Manor 🍴
+Food_Manor is a modern food-ordering web application built entirely with React.js. The app leverages Redux for efficient state management and uses a CORS extension to handle cross-origin requests during development.
 ![image](https://github.com/user-attachments/assets/db874e1f-82b8-4ec6-84b5-c8bb6f08a967)
 
 
@@ -21,10 +21,10 @@ Follow these steps to set up the project locally:
 
 ## Clone the repository:
 bash
-git clone https://github.com/dipansu1196/FoodVilla.git
+git clone https://github.com/AnuragShikharChaturvedi/Food_Manor.git
 Navigate to the project directory:
 bash
-cd FoodVilla
+cd Food_Manor
 Install dependencies:
 bash
 npm install
