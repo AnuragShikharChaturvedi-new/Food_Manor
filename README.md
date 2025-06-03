@@ -37,7 +37,7 @@ Enable the extension while running the app locally.
 
 ## Usage 🖥️
 Open the app in your browser at http://localhost:3000 (or the specified port).
-Explore the features and functionalities of FoodVilla.
+Explore the features and functionalities of Food_Manor.
 Contributing 🤝
 Contributions, issues, and feature requests are welcome!
 Feel free to check the issues page for any open issues.
@@ -59,7 +59,7 @@ This project is licensed under the MIT License.
 
 ## Contact 📧
 For any inquiries, reach out to:
-GitHub: dipansu1196
+GitHub:AnuragShikharChaturvedi
 =======
 # Food_Manor
 >>>>>>> e9ee263aa73b7ee5cad82331fb56a89c7fe2dbfd
