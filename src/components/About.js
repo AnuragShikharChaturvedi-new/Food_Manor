@@ -9,7 +9,7 @@ const About = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="md:w-1/2">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-              Welcome to <span className="text-orange-500">FoodVilla</span>
+              Welcome to <span className="text-orange-500">Food_Manor</span>
             </h1>
             <p className="text-gray-600 text-lg mb-6">
               Delivering happiness with every order, we connect you with the best restaurants in your area.
@@ -48,7 +48,7 @@ const About = () => {
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-            Why Choose FoodVilla?
+            Why Choose Food_Manor?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Fast Delivery */}
