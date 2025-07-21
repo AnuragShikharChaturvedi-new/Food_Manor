@@ -7,7 +7,7 @@ const Footer = () => {
               <div className="flex flex-col items-center justify-center">
                   {/* Logo Section */}
                   <div className="mb-6">
-                      <h1 className="text-3xl font-bold text-orange-500">FoodVilla</h1>
+                      <h1 className="text-3xl font-bold text-orange-500">Food_Manor</h1>
                   </div>
                   
                   {/* Copyright Section */}
@@ -20,7 +20,7 @@ const Footer = () => {
                           <span className="text-red-500 animate-pulse">❤</span>{" "}
                           by{" "}
                           <span className="font-semibold text-orange-500">
-                              Dipansu
+                              Anurag
                           </span>
                       </p>
                   </div>
