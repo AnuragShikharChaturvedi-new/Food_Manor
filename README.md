@@ -58,8 +58,8 @@ cd Food_Manor
 - 🍴 Filter/sort food items
 
 - 🧾 Order history & user dashboard
-
-   ---
+  
+---
 
  ## 🧑‍💻 Author
 - Built with 🍔, ☕, and React ⚛️ by Anurag Chaturvedi
