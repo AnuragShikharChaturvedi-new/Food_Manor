@@ -1,65 +1,70 @@
-<<<<<<< HEAD
-## Food_Manor 🍴
-Food_Manor is a modern food-ordering web application built entirely with React.js. The app leverages Redux for efficient state management and uses a CORS extension to handle cross-origin requests during development.
-![image](https://github.com/user-attachments/assets/db874e1f-82b8-4ec6-84b5-c8bb6f08a967)
+# 🍽️ Food Manor
 
+**Food Manor** is a modern and responsive food ordering web application that allows users to browse delicious menus, add items to cart, and simulate a smooth ordering experience. Built using React.js, this frontend-focused project delivers a sleek and intuitive UI for food lovers and developers alike.
 
-## Features 🚀
-🛒 Restaurant Listings: Browse a variety of restaurants and cuisines.
-🔍 Search Functionality: Find your favorite restaurants or dishes quickly.
-💳 Order Management: Add items to your cart and place orders seamlessly.
-📱 Responsive Design: Optimized for both desktop and mobile devices.
-⚡ State Management: Centralized state management with Redux for predictable and scalable app behavior.
+---
 
-## Tech Stack 🛠️
-Frontend: React.js
-State Management: Redux
-Styling: Tailwind CSS
-CORS Handling: CORS extension for development
-Installation 💻
-Follow these steps to set up the project locally:
+## 🌐 Tech Stack
 
-## Clone the repository:
-bash
-git clone https://github.com/AnuragShikharChaturvedi/Food_Manor.git
-Navigate to the project directory:
-bash
+**Frontend:** React.js, Tailwind CSS, JavaScript  
+**State Management:** useState, useEffect  
+**Routing:** React Router DOM  
+**Other Tools:** Context API (if used), custom hooks (if any)
+
+---
+
+## 📌 Features
+
+- 🧾 **Menu Display**
+  - Showcases food items with title, price, image, and description
+
+- 🛒 **Cart Functionality**
+  - Add, remove, and manage items in cart
+  - View total price and item count
+
+- ⚡ **Dynamic Routing**
+  - Navigate between home, menu, cart, and individual items
+
+- 🎨 **Tailwind Styling**
+  - Fully responsive layout with modern UI elements
+
+- 🧠 **Component-Based Architecture**
+  - Clean and maintainable structure using reusable components
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the Repository
+
+git clone https://github.com/Algoraver22/Food_Manor.git
 cd Food_Manor
-Install dependencies:
-bash
-npm install
-Start the development server:
-bash
-npm start
-Install the CORS extension in your browser to handle cross-origin resource sharing during development.
-For Chrome: CORS Unblock Extension
-Enable the extension while running the app locally.
 
-## Usage 🖥️
-Open the app in your browser at http://localhost:3000 (or the specified port).
-Explore the features and functionalities of Food_Manor.
-Contributing 🤝
-Contributions, issues, and feature requests are welcome!
-Feel free to check the issues page for any open issues.
+### 2. Install Dependencies
+- npm install
 
-## Steps to Contribute:
-Fork this repository.
-Create a new branch:
-bash
-git checkout -b feature-name
-Commit your changes:
-bash
-git commit -m "Add some feature"
-Push to the branch:
-bash
-git push origin feature-name
-Submit a pull request.
-## License 📄
+### 3. Start the Development Server
+ - npm start
+   
+---
+
+## 💡 Future Enhancements
+- 🔐 Add user authentication
+
+- 🌍 Connect to a backend for live data
+
+- 📦 Integrate payment gateway
+
+- 🍴 Filter/sort food items
+
+- 🧾 Order history & user dashboard
+
+   ---
+
+ ## 🧑‍💻 Author
+- Built with 🍔, ☕, and React ⚛️ by Anurag Chaturvedi
+
+---
+## 📜 License
 This project is licensed under the MIT License.
 
-## Contact 📧
-For any inquiries, reach out to:
-GitHub:AnuragShikharChaturvedi
-=======
-# Food_Manor
->>>>>>> e9ee263aa73b7ee5cad82331fb56a89c7fe2dbfd
