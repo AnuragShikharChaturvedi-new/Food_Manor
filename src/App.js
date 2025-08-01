@@ -24,7 +24,7 @@ const App = () => {
   const [userName, setUserName] = useState("Rahul");
 
   useEffect(() => {
-    setUserName("dipanshu");
+    setUserName("Anurag");
   }, []);
 
   return (
