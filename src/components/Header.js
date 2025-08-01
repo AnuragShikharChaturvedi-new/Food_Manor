@@ -18,11 +18,11 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img
-                src="https://png.pngtree.com/png-vector/20230217/ourmid/pngtree-food-logo-design-for-restaurant-and-business-png-image_6604922.png"
+                src="https://tse3.mm.bing.net/th/id/OIP.kr3sfUf91z4hPJHBdsmGzwAAAA?w=360&h=360&rs=1&pid=ImgDetMain&o=7&rm=3"
                 alt="App Logo"
                 className="w-12 h-12 object-contain"
               />
-              <span className="ml-2 text-xl font-bold text-gray-800">FoodVilla</span>
+              <span className="ml-2 text-xl font-bold text-gray-800">Food_Manor</span>
             </Link>
           </div>
 
