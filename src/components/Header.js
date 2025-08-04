@@ -3,12 +3,32 @@ import { Link } from 'react-router-dom';
 import useOnlineStatus from '../utils/useOnlineStatus';
 import UserContext from '../utils/UserContext';
 import { useSelector } from 'react-redux';
+import LoginModal from './LoginModal';
 
 const Header = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState(null);
+  const [showLoginModal, setShowLoginModal] = useState(false);
   const onlineStatus = useOnlineStatus();
   const { loggedInUser } = useContext(UserContext);
   const cartItems = useSelector((store) => store.cart.items);
+
+  useEffect(() => {
+    const savedUser = localStorage.getItem('foodManorUser');
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+  }, []);
+
+  const handleLogin = (userData) => {
+    setUser(userData);
+    localStorage.setItem('foodManorUser', JSON.stringify(userData));
+    setShowLoginModal(false);
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+    localStorage.removeItem('foodManorUser');
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white shadow-lg z-50 h-20">
@@ -88,16 +108,16 @@ const Header = () => {
 
               {/* User Section */}
               <div className="flex items-center space-x-4">
-                <span className="text-gray-700 font-medium">{loggedInUser}</span>
+                {user && <span className="text-gray-700 font-medium">Hi, {user.name}</span>}
                 <button
-                  onClick={() => setIsLoggedIn(!isLoggedIn)}
+                  onClick={user ? handleLogout : () => setShowLoginModal(true)}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 
-                    ${isLoggedIn 
+                    ${user 
                       ? 'bg-red-500 text-white hover:bg-red-600' 
                       : 'bg-orange-500 text-white hover:bg-orange-600'
                     }`}
                 >
-                  {isLoggedIn ? 'Logout' : 'Login'}
+                  {user ? 'Logout' : 'Login'}
                 </button>
               </div>
             </div>
@@ -122,6 +142,11 @@ const Header = () => {
           </button>
         </div>
       </div>
+      <LoginModal 
+        isOpen={showLoginModal} 
+        onClose={() => setShowLoginModal(false)} 
+        onLogin={handleLogin} 
+      />
     </header>
   );
 };
