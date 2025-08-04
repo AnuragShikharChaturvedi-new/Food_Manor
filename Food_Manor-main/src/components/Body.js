@@ -37,14 +37,14 @@ const Body = () => {
         const allRestaurants = [];
         
         for (let i = 0; i < categories.length; i++) {
-          const controller = new AbortController();
-          const timeoutId = setTimeout(() => controller.abort(), 8000);
-          
-          const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categories[i]}`, {
-            signal: controller.signal,
-            headers: { 'Accept': 'application/json' }
-          });
-          clearTimeout(timeoutId);
+          const response = await Promise.race([
+            fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categories[i]}`, {
+              headers: { 'Accept': 'application/json' }
+            }),
+            new Promise((_, reject) => 
+              setTimeout(() => reject(new Error('Timeout')), 8000)
+            )
+          ]);
           
           if (!response.ok) throw new Error(`HTTP ${response.status}`);
           const data = await response.json();
@@ -74,14 +74,14 @@ const Body = () => {
       
       // Fallback API - JSONPlaceholder with food data
       async () => {
-        const controller = new AbortController();
-        const timeoutId = setTimeout(() => controller.abort(), 5000);
-        
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-          signal: controller.signal,
-          headers: { 'Accept': 'application/json' }
-        });
-        clearTimeout(timeoutId);
+        const response = await Promise.race([
+          fetch('https://jsonplaceholder.typicode.com/posts', {
+            headers: { 'Accept': 'application/json' }
+          }),
+          new Promise((_, reject) => 
+            setTimeout(() => reject(new Error('Timeout')), 5000)
+          )
+        ]);
         
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const posts = await response.json();

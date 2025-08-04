@@ -14,10 +14,28 @@
       content="Food Manor - Order delicious food online"
     />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script>
+      // Basic browser compatibility check
+      (function() {
+        if (!window.console) window.console = { log: function() {} };
+        if (!Array.prototype.forEach) {
+          Array.prototype.forEach = function(fn) {
+            for (var i = 0; i < this.length; i++) fn(this[i], i, this);
+          };
+        }
+      })();
+    </script>
     <title>Food_Manor</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial, sans-serif;">
+        <div style="text-align: center;">
+          <h2>Loading Food Manor...</h2>
+          <p>Please wait while we prepare your food ordering experience.</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
